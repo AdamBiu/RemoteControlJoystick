@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    layout-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn_connect"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <!-- <data>
+        <variable
+            name="@string/Connect"
+            type="com.remote_control_joystick.MainActivity"
+        /variable>
+    </data>-->
+
+    <Button
+        android:id="@+id/connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="156dp"
+        android:onClick="clicked"
+        android:text="@string/Connect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtBox_IP"
+        android:layout_width="165dp"
+        android:layout_height="46dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginRight="132dp"
+        android:digits="0123456789."
+        android:maxLength="15"
+        android:hint="@string/ip"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtBox_port"
+        android:layout_width="165dp"
+        android:layout_height="46dp"
+        android:maxLength="4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginRight="132dp"
+        android:digits="0123456789."
+        android:hint="@string/port"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
