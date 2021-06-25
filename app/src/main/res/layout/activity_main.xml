@@ -1,64 +1,134 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--    layout-->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!--    layout-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout-->
+<!--<android.support.constraint.ConstraintLayout-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/btn_connect"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-   <!-- <data>
+    <data>
+
         <variable
-            name="@string/Connect"
-            type="com.remote_control_joystick.MainActivity"
-        /variable>
-    </data>-->
+            name="RemoteViewModel"
+            type="com.remote_control_joystick.RemoteViewModel" />
+    </data>
 
-    <Button
-        android:id="@+id/connect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-        android:layout_centerHorizontal="true"
+        <Button
+            android:id="@+id/connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="156dp"
 
-        android:layout_marginTop="156dp"
-        android:onClick="clicked"
-        android:text="@string/Connect"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:onClick="clickedConnect"
+            android:text="@string/Connect"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.46"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
-    <EditText
-        android:id="@+id/txtBox_IP"
-        android:layout_width="165dp"
-        android:layout_height="46dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="132dp"
-        android:layout_marginRight="132dp"
-        android:digits="0123456789."
-        android:maxLength="15"
-        android:hint="@string/ip"
-        android:inputType="number|numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/txtBox_IP"
+            android:layout_width="165dp"
+            android:layout_height="46dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="132dp"
+            android:layout_marginRight="132dp"
+            android:digits="0123456789."
+            android:hint="@string/ip"
+            android:inputType="number|numberDecimal"
+            android:maxLength="15"
 
-    <EditText
-        android:id="@+id/txtBox_port"
-        android:layout_width="165dp"
-        android:layout_height="46dp"
-        android:maxLength="4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="132dp"
-        android:layout_marginRight="132dp"
-        android:digits="0123456789."
-        android:hint="@string/port"
-        android:inputType="number|numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:imeOptions="actionNext"/>
+
+        <EditText
+            android:id="@+id/txtBox_port"
+            android:layout_width="165dp"
+            android:layout_height="46dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="84dp"
+            android:layout_marginEnd="132dp"
+            android:layout_marginRight="132dp"
+            android:digits="0123456789"
+            android:hint="@string/port"
+
+            android:inputType="number"
+            android:maxLength="4"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:imeOptions="actionSend"/>
+
+        <!--        <TextView
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/content_appears_here"
+                    android:letterSpacing="0.1"
+                    android:padding="10dp"
+                    android:textSize="18dp" />-->
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ninja.eigenein.joypad.JoypadView
+            android:id="@+id/joypad_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="350dp"
+            android:background="@android:drawable/arrow_up_float"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:directions_color="@android:color/holo_blue_bright"
+            app:inner_radius="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:moveable_color="@color/colorAccent"
+            app:moveable_radius="50dp" />
+
+        <SeekBar
+            android:id="@+id/seekBar_rudder"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:max="100"
+            android:progress="50"
+            app:layout_constraintBottom_toTopOf="@+id/joypad_view"
+            app:layout_constraintLeft_toLeftOf="@+id/joypad_view"
+            app:layout_constraintRight_toRightOf="@+id/joypad_view" />
+
+        <SeekBar
+            android:id="@+id/seekBar_throttle"
+            android:layout_width="350dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="200dp"
+            android:max="100"
+            android:rotation="270"
+            app:layout_constraintBottom_toBottomOf="@+id/joypad_view"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/joypad_view" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout><!--</androidx.constraintlayout.widget.ConstraintLayout>-->
