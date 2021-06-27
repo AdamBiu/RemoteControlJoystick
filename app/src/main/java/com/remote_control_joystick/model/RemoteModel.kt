@@ -10,26 +10,19 @@ class RemoteModel {
     private var executor: ExecutorService
 
 
+    //create thread pool with one thread
     constructor() {
         this.client = Client()
-
         this.executor = Executors.newFixedThreadPool(1)
-//        for (i in 0..9) {
-//            val worker = Runnable { println("Hello this is thread " + i) }
-//            executor.execute(worker)
-//        }
-//        executor.shutdown()
-//        while (!executor.isTerminated) {
-//        }
-//        println("Finished all threads")
-
     }
 
+    //connect to Flight Gear
     fun connect(ip: String, port: Int) {
         client.connect(ip, port)
     }
 
 
+    //send data to Flight Gear
     fun sendData(data: String) {
         val worker = Runnable { client.sendData(data) }
         executor.execute(worker)

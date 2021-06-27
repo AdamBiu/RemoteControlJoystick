@@ -14,6 +14,8 @@ open class RemoteView {
 
     private var midRubber: Float
 
+
+    //set listener for both seek bar and build the joystick
     constructor(binding: ActivityMainBinding, rViewModel: RemoteViewModel) {
         this.dataBinding = binding
         this.rViewModel = rViewModel
@@ -26,7 +28,7 @@ open class RemoteView {
 
     }
 
-
+    //Listener for throttle
     private fun initThrottleSeekBar() {
         dataBinding.seekBarThrottle.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
@@ -38,6 +40,7 @@ open class RemoteView {
         })
     }
 
+    //Listener for rudder
     private fun initRudderSeekBar() {
         dataBinding.seekBarRudder.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {

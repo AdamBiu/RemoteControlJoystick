@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var rViewModel: RemoteViewModel
 
 
+    //When the app is in the front
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -52,12 +53,14 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    //hide the keyboard when click on "Connect"
     private fun hideSoftKeyboard(view: View) {
         val imm =
             getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
+    //listener when click on connect
     fun clickedConnect(view: View) {
         rViewModel.connect()
         hideSoftKeyboard(view)

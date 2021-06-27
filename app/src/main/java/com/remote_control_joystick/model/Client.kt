@@ -11,17 +11,12 @@ const val TAG = "MainActivity"
 
 class Client {
 
-    // private var rModel: RemoteModel
     private lateinit var executor: ExecutorService
     private lateinit var socket: Socket
     private var printWriter: PrintWriter? = null
-    //private var serverSocket: ServerSocket? = null
 
 
-    /* constructor(model: RemoteModel) {
-         this.rModel = model
-     }*/
-
+    //open socket and connect to the Flight Gear
     fun connect(ip: String, port: Int) {
 
         if (this::executor.isInitialized) {
@@ -37,7 +32,7 @@ class Client {
                 Log.d(TAG, "socket client connecting ...")
                 //rModel.messageConnecting()
                 this.socket = Socket(ip, port)
-                
+
                 Log.d(TAG, "client connected")
                 this.printWriter = PrintWriter(socket.getOutputStream(), true)
 
@@ -49,13 +44,7 @@ class Client {
 
     }
 
-//    private fun close() {
-//        socket.close()
-//        Log.d(TAG, "socket closed")
-//
-//    }
-
-
+    //Send data to the Flight Gear
     fun sendData(data: String) {
         Log.d(TAG, "data to send: $data")
         printWriter?.let {

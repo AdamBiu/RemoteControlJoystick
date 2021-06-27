@@ -11,6 +11,7 @@ class RemoteViewModelFactory(databinding: ActivityMainBinding, rModel: RemoteMod
     private var myDatabinding: ActivityMainBinding = databinding
     private var myModel: RemoteModel = rModel
 
+    //Singleton for RemoteViewModel
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(RemoteViewModel::class.java)) {
             return RemoteViewModel(myDatabinding, myModel) as T

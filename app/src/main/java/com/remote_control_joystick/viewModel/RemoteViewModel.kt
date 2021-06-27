@@ -12,11 +12,13 @@ class RemoteViewModel() : ViewModel() {
     private lateinit var dataBinding: ActivityMainBinding
 
 
+    //constructor for ViewModel
     constructor(dataBinding: ActivityMainBinding, rModel: RemoteModel) : this() {
         this.rModel = rModel
         this.dataBinding = dataBinding
     }
 
+    //Check if the ip and port are valid
     fun connect() {
 
         if (dataBinding.txtBoxIP.text.toString() == "" ||
@@ -34,27 +36,15 @@ class RemoteViewModel() : ViewModel() {
         }
     }
 
+    //message to display
     private fun displayMessage(msg: String) {
         val mySnackBar = Snackbar.make(dataBinding.connect, msg, 4000)
         mySnackBar.show()
     }
 
+    //send data to the Flight Gear
     fun sendData(data: String) {
         rModel.sendData(data)
     }
-
-/* companion object {
-     fun makeNumBetweenMinusOneToOne(myNum: Float, maxNam: Float): Float {
-         var retNum: Float = 0F
-         var midNum: Float = 0F
-
-         if (myNum < midNum) {
-             retNum = -(1 - (myNum.toFloat() / midNum))
-         } else if (myNum > midNum) {
-             retNum = (myNum - midNum).toFloat() / midNum
-         }
-         return myNum
-     }
- }*/
 
 }
