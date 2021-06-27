@@ -15,6 +15,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/background"
         tools:context=".view.MainActivity">
 
         <Button
@@ -66,7 +67,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-    <!--    <TextView
+        <!--    <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -105,7 +106,9 @@
             android:progress="50"
             app:layout_constraintBottom_toTopOf="@+id/joypad_view"
             app:layout_constraintLeft_toLeftOf="@+id/joypad_view"
-            app:layout_constraintRight_toRightOf="@+id/joypad_view" />
+            app:layout_constraintRight_toRightOf="@+id/joypad_view"
+            android:progressBackgroundTint="@color/white"
+            />
 
         <SeekBar
             android:id="@+id/seekBar_throttle"
@@ -116,7 +119,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/joypad_view"
             app:layout_constraintEnd_toStartOf="@+id/joypad_view"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/joypad_view" />
+            app:layout_constraintTop_toTopOf="@+id/joypad_view"
+            android:progressBackgroundTint="@color/white"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
