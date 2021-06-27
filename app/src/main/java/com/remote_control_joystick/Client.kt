@@ -37,6 +37,7 @@ class Client {
                 Log.d(TAG, "socket client connecting ...")
                 //rModel.messageConnecting()
                 this.socket = Socket(ip, port)
+                
                 Log.d(TAG, "client connected")
                 this.printWriter = PrintWriter(socket.getOutputStream(), true)
 

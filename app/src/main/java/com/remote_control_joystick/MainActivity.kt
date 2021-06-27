@@ -7,13 +7,13 @@ import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
-import android.widget.Toast
+
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
+
 import androidx.lifecycle.ViewModelProviders
 
 import com.remote_control_joystick.databinding.ActivityMainBinding
-import java.net.ConnectException
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,14 +32,6 @@ class MainActivity : AppCompatActivity() {
         rViewModel = ViewModelProviders.of(this, factory).get(RemoteViewModel::class.java)
         dataBinding.remoteViewModel = rViewModel
         dataBinding.lifecycleOwner = this
-//        rViewModel.list.observe(this, Observer {
-//            dataBinding.content.text = it.toString()
-//        })
-//        rViewModel.isStringEmpty.observe(this, Observer {
-//            if (it == true) {
-//                Toast.makeText(this, "No Notes Detected", Toast.LENGTH_SHORT).show();
-//            }
-//        })
 
         val view = RemoteView(dataBinding, rViewModel)
 

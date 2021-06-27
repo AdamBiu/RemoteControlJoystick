@@ -15,7 +15,7 @@ open class RemoteView {
     constructor(binding: ActivityMainBinding, rViewModel: RemoteViewModel) {
         this.dataBinding = binding
         this.rViewModel = rViewModel
-        Joystick(this.rViewModel, dataBinding.textView, dataBinding.joypadView)
+        Joystick(this.rViewModel, dataBinding.joypadView)
 
         midRubber = dataBinding.seekBarRudder.max.toFloat() / 2
         initThrottleSeekBar()

@@ -29,8 +29,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.46"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/txtBox_IP"
@@ -42,12 +41,12 @@
             android:layout_marginRight="132dp"
             android:digits="0123456789."
             android:hint="@string/ip"
+            android:imeOptions="actionNext"
             android:inputType="number|numberDecimal"
-            android:maxLength="15"
 
+            android:maxLength="15"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:imeOptions="actionNext"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/txtBox_port"
@@ -60,23 +59,14 @@
             android:digits="0123456789"
             android:hint="@string/port"
 
+            android:imeOptions="actionSend"
             android:inputType="number"
+
             android:maxLength="4"
-
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:imeOptions="actionSend"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <!--        <TextView
-                    android:id="@+id/content"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="@string/content_appears_here"
-                    android:letterSpacing="0.1"
-                    android:padding="10dp"
-                    android:textSize="18dp" />-->
-
-        <TextView
+    <!--    <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,7 +76,7 @@
             android:text="TextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" />-->
 
 
         <ninja.eigenein.joypad.JoypadView
@@ -119,13 +109,13 @@
 
         <SeekBar
             android:id="@+id/seekBar_throttle"
-            android:layout_width="350dp"
-            android:layout_height="0dp"
-            android:layout_marginRight="200dp"
+            android:layout_width="250dp"
+            android:layout_height="@+id/joypad_view"
             android:max="100"
             android:rotation="270"
             app:layout_constraintBottom_toBottomOf="@+id/joypad_view"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/joypad_view"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/joypad_view" />
 
 

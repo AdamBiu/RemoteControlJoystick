@@ -1,6 +1,5 @@
 package com.remote_control_joystick
 
-import android.util.Log
 import android.util.Patterns
 import androidx.lifecycle.ViewModel
 import com.google.android.material.snackbar.Snackbar
@@ -8,8 +7,8 @@ import com.remote_control_joystick.databinding.ActivityMainBinding
 
 class RemoteViewModel() : ViewModel() {
 
-    lateinit var rModel: RemoteModel
-    lateinit var dataBinding: ActivityMainBinding
+    private lateinit var rModel: RemoteModel
+    private lateinit var dataBinding: ActivityMainBinding
 
 
     constructor(dataBinding: ActivityMainBinding, rModel: RemoteModel) : this() {
@@ -26,6 +25,7 @@ class RemoteViewModel() : ViewModel() {
         } else if (!Patterns.IP_ADDRESS.matcher(dataBinding.txtBoxIP.text.toString()).matches()) {
             displayMessage("IP not valid")
         } else {
+
             rModel.connect(
                 dataBinding.txtBoxIP.text.toString(),
                 dataBinding.txtBoxPort.text.toString().toInt()
