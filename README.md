@@ -9,3 +9,5 @@ our application is working from jdk version 8 and from Android 10 (API 29).
 
 Video presentation:
 https://drive.google.com/file/d/1i5HA5Pj2DQ1i2H-GXVCXx86X2Wpbpned/view?usp=drivesdk
+
+Presentation file in git, named as Presentation.pptx
