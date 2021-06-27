@@ -6,3 +6,6 @@ Moreover, our program can control the aileron, throttle and more indices of the 
 The main Class in our program are the MainActivity that in the view package.
 For more information on the classes and functions, see the documentation in the code.
 our application is working from jdk version 8 and from Android 10 (API 29).
+
+Video presentation:
+https://drive.google.com/open?id=1CYyMyDVGUGBpsWox-ZH2pWIGFtLUuH71&authuser=adam%40sweetch.com&usp=drive_fs
