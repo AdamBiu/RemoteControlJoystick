@@ -1,7 +1,9 @@
-package com.remote_control_joystick
+package com.remote_control_joystick.view
 
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
+import com.remote_control_joystick.view.Joystick
+import com.remote_control_joystick.viewModel.RemoteViewModel
 import com.remote_control_joystick.databinding.ActivityMainBinding
 
 

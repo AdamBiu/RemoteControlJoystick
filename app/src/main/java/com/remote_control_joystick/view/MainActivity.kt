@@ -1,9 +1,8 @@
-package com.remote_control_joystick
+package com.remote_control_joystick.view
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
@@ -11,8 +10,12 @@ import android.view.inputmethod.InputMethodManager
 import androidx.databinding.DataBindingUtil
 
 import androidx.lifecycle.ViewModelProviders
+import com.remote_control_joystick.R
+import com.remote_control_joystick.viewModel.RemoteViewModelFactory
+import com.remote_control_joystick.viewModel.RemoteViewModel
 
 import com.remote_control_joystick.databinding.ActivityMainBinding
+import com.remote_control_joystick.model.RemoteModel
 
 
 class MainActivity : AppCompatActivity() {
@@ -61,37 +64,6 @@ class MainActivity : AppCompatActivity() {
         dataBinding.txtBoxIP.clearFocus();
         dataBinding.txtBoxPort.clearFocus();
 
-    }
-
-
-    override fun onStop() {
-        super.onStop()
-        Log.d(TAG, "onStop()")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d(TAG, "onPause()")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d(TAG, "onDestroy()")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d(TAG, "onResume()")
-    }
-
-    override fun onStart() {
-        super.onStart()
-        Log.d(TAG, "onStart()")
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Log.d(TAG, "onRestart()")
     }
 
 

@@ -1,4 +1,4 @@
-package com.remote_control_joystick
+package com.remote_control_joystick.model
 
 import android.util.Log
 import java.io.PrintWriter

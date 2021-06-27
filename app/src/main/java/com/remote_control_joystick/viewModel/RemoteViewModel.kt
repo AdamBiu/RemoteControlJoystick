@@ -1,8 +1,9 @@
-package com.remote_control_joystick
+package com.remote_control_joystick.viewModel
 
 import android.util.Patterns
 import androidx.lifecycle.ViewModel
 import com.google.android.material.snackbar.Snackbar
+import com.remote_control_joystick.model.RemoteModel
 import com.remote_control_joystick.databinding.ActivityMainBinding
 
 class RemoteViewModel() : ViewModel() {

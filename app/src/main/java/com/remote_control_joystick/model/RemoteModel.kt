@@ -1,4 +1,4 @@
-package com.remote_control_joystick
+package com.remote_control_joystick.model
 
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors

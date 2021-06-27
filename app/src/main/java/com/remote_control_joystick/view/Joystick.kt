@@ -1,6 +1,6 @@
-package com.remote_control_joystick
+package com.remote_control_joystick.view
 
-import com.remote_control_joystick.RemoteViewModel
+import com.remote_control_joystick.viewModel.RemoteViewModel
 import ninja.eigenein.joypad.JoypadView
 
 class Joystick : JoypadView.Listener {

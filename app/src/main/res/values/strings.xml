@@ -1,8 +1,7 @@
 <resources>
-    <string name="app_name">Remote_Control_Joystick</string>
+    <string name="app_name">Remote Flight Gear</string>
     <string name="Connect">Connect</string>
     <string name="ip">IP</string>
     <string name="port">Port</string>
-    <string name="content_appears_here">Content Appears here</string>
-<!--    <string name="default_val">6400</string>-->
+
 </resources>

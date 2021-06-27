@@ -1,7 +1,8 @@
-package com.remote_control_joystick
+package com.remote_control_joystick.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.remote_control_joystick.model.RemoteModel
 import com.remote_control_joystick.databinding.ActivityMainBinding
 import java.lang.IllegalArgumentException
 
