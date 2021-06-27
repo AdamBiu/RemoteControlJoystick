@@ -8,4 +8,4 @@ For more information on the classes and functions, see the documentation in the 
 our application is working from jdk version 8 and from Android 10 (API 29).
 
 Video presentation:
-https://drive.google.com/open?id=1CYyMyDVGUGBpsWox-ZH2pWIGFtLUuH71&authuser=adam%40sweetch.com&usp=drive_fs
+https://drive.google.com/file/d/1i5HA5Pj2DQ1i2H-GXVCXx86X2Wpbpned/view?usp=drivesdk
